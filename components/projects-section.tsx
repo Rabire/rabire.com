@@ -51,35 +51,33 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="mt-60 flex items-center justify-center"
+      className="screen-wrapper"
       aria-labelledby="projects-heading"
     >
-      <div className="max-w-screen-xl w-full px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">
-          Boost Your Strategy with Smart Features
-        </h2>
+      <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">
+        Boost Your Strategy with Smart Features
+      </h2>
 
-        <div className="mt-8 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
-          {features.map((feature) => (
-            <Card
-              key={feature.title}
-              className="flex flex-col border rounded-xl overflow-hidden shadow-none"
-            >
-              <CardHeader>
-                <feature.icon />
-                <h4 className="!mt-3 text-xl font-semibold tracking-tight">
-                  {feature.title}
-                </h4>
-                <p className="mt-1 text-muted-foreground text-[17px]">
-                  {feature.description}
-                </p>
-              </CardHeader>
-              <CardContent className="mt-auto px-0 pb-0">
-                <div className="bg-muted h-40 ml-6 rounded-tl-xl" />
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+      <div className="mt-8 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
+        {features.map((feature) => (
+          <Card
+            key={feature.title}
+            className="flex flex-col border rounded-xl overflow-hidden shadow-none"
+          >
+            <CardHeader>
+              <feature.icon />
+              <h4 className="!mt-3 text-xl font-semibold tracking-tight">
+                {feature.title}
+              </h4>
+              <p className="mt-1 text-muted-foreground text-[17px]">
+                {feature.description}
+              </p>
+            </CardHeader>
+            <CardContent className="mt-auto px-0 pb-0">
+              <div className="bg-muted h-40 ml-6 rounded-tl-xl" />
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );

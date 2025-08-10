@@ -103,18 +103,16 @@ const AboutSection = () => {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="mx-auto max-w-screen-xl w-full px-6"
+      className="screen-wrapper"
     >
-      <header>
-        <h2
-          id="about-heading"
-          className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg"
-        >
-          Le code, c&apos;est bien.
-          <br />
-          Mais qui tape dessus ?
-        </h2>
-      </header>
+      <h2
+        id="about-heading"
+        className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg"
+      >
+        Le code, c&apos;est bien.
+        <br />
+        Mais qui tape dessus ?
+      </h2>
 
       <div className="mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-2 gap-12">
         <div>
