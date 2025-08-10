@@ -58,7 +58,7 @@ const features = [
     icon: RocketIcon,
     title: "Ce que j'apporte vraiment",
     description:
-      "Je n'ai jamais raté une deadline, et je n'ai pas l'intention de commencer maintenant. C'est mon petit défi personnel : livrer toujours à temps, sans jamais sacrifier la qualité du travail.",
+      "Je n'ai jamais raté une deadline, et je n'ai pas l'intention de commencer maintenant. C'est mon petit défi personnel : livrer toujours à temps en se concentrant sur ce qui compte vraiment.",
     image: "/value-proposition.jpg",
     alt: "Valeur ajoutée et engagement qualité",
     id: "valeur-ajoutee",
@@ -101,95 +101,93 @@ const AboutSection = () => {
 
   return (
     <section
-      className="flex items-center justify-center"
+      id="about"
       aria-labelledby="about-heading"
+      className="mx-auto max-w-screen-xl w-full px-6"
     >
-      <div className="max-w-screen-xl w-full px-6">
-        <header>
-          <h2
-            id="about-heading"
-            className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg"
-          >
-            Le code, c&apos;est bien.
-            <br />
-            Mais qui tape dessus ?
-          </h2>
-        </header>
+      <header>
+        <h2
+          id="about-heading"
+          className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg"
+        >
+          Le code, c&apos;est bien.
+          <br />
+          Mais qui tape dessus ?
+        </h2>
+      </header>
 
-        <div className="mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-2 gap-12">
-          <div>
-            <Accordion value={activeItem} type="single" className="w-full">
-              {features.map(({ title, description, icon: Icon }, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="data-[state=open]:border-b-2 data-[state=open]:border-primary"
-                  onMouseEnter={() =>
-                    !isMobile && handleItemInteraction(`item-${index}`)
-                  }
-                  onClick={() =>
-                    isMobile && handleItemInteraction(`item-${index}`)
-                  }
-                >
-                  <AccordionTrigger
-                    className={`text-lg [&>svg]:hidden ${
-                      isMobile ? "cursor-pointer" : "pointer-events-none"
-                    }`}
-                    aria-expanded={activeItem === `item-${index}`}
-                    aria-controls={`content-${index}`}
-                    id={`trigger-${index}`}
-                  >
-                    <div className="flex items-center gap-4">
-                      <Icon aria-hidden="true" />
-                      <span>{title}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent
-                    className="text-[17px] leading-relaxed text-muted-foreground"
-                    id={`content-${index}`}
-                    aria-labelledby={`trigger-${index}`}
-                  >
-                    {description}
-                    <div className="mt-6 mb-2 md:hidden aspect-video w-full bg-muted rounded-xl overflow-hidden relative">
-                      <Image
-                        src={
-                          features[parseInt(activeItem.split("-")[1]) || 0]
-                            .image
-                        }
-                        alt={
-                          features[parseInt(activeItem.split("-")[1]) || 0].alt
-                        }
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-
-          {/* Media */}
-          <div className="hidden md:block w-full h-full bg-muted rounded-xl overflow-hidden relative min-h-[400px]">
-            {features.map(({ image, alt }, index) => (
-              <div
+      <div className="mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-2 gap-12">
+        <div>
+          <Accordion value={activeItem} type="single" className="w-full">
+            {features.map(({ title, description, icon: Icon }, index) => (
+              <AccordionItem
                 key={index}
-                className={`absolute inset-0 transition-opacity duration-300 ${
-                  activeItem === `item-${index}` ? "opacity-100" : "opacity-0"
-                }`}
+                value={`item-${index}`}
+                className="data-[state=open]:border-b-2 data-[state=open]:border-primary"
+                onMouseEnter={() =>
+                  !isMobile && handleItemInteraction(`item-${index}`)
+                }
+                onClick={() =>
+                  isMobile && handleItemInteraction(`item-${index}`)
+                }
               >
-                <Image
-                  src={image}
-                  alt={alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority={index === 0}
-                />
-              </div>
+                <AccordionTrigger
+                  className={`text-lg [&>svg]:hidden ${
+                    isMobile ? "cursor-pointer" : "pointer-events-none"
+                  }`}
+                  aria-expanded={activeItem === `item-${index}`}
+                  aria-controls={`content-${index}`}
+                  id={`trigger-${index}`}
+                >
+                  <div className="flex items-center gap-4">
+                    <Icon aria-hidden="true" />
+                    <span>{title}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent
+                  className="text-[17px] leading-relaxed text-muted-foreground"
+                  id={`content-${index}`}
+                  aria-labelledby={`trigger-${index}`}
+                >
+                  {description}
+                  <div className="mt-6 mb-2 md:hidden aspect-video w-full bg-muted rounded-xl overflow-hidden relative">
+                    <Image
+                      src={
+                        features[parseInt(activeItem.split("-")[1]) || 0].image
+                      }
+                      alt={
+                        features[parseInt(activeItem.split("-")[1]) || 0].alt
+                      }
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
+        </div>
+
+        {/* Media */}
+        <div className="hidden md:block w-full h-full bg-muted rounded-xl overflow-hidden relative min-h-[400px]">
+          {features.map(({ image, alt }, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-300 ${
+                activeItem === `item-${index}` ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src={image}
+                alt={alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={index === 0}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

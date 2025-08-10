@@ -49,11 +49,16 @@ const features = [
 
 const ProjectsSection = () => {
   return (
-    <div className="mt-60 flex items-center justify-center">
+    <section
+      id="projects"
+      className="mt-60 flex items-center justify-center"
+      aria-labelledby="projects-heading"
+    >
       <div className="max-w-screen-xl w-full px-6">
         <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">
           Boost Your Strategy with Smart Features
         </h2>
+
         <div className="mt-8 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
           {features.map((feature) => (
             <Card
@@ -76,7 +81,7 @@ const ProjectsSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

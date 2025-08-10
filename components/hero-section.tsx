@@ -9,7 +9,7 @@ const HeroSection = () => {
         <div>
           <Badge className="rounded-full py-1 px-6 text-sm">
             Je recherche un CDI !
-            <span className="aspect-square bg-green-400 animate-ping ml-4 rounded-full w-1.5 h-1.5"></span>
+            <span className="aspect-square bg-background animate-ping ml-4 rounded-full w-1.5 h-1.5"></span>
           </Badge>
           <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold !leading-[1.2]">
             Rabire HAKIM
