@@ -9,6 +9,7 @@ import Link from "next/link";
 export const NAV_ITEMS = [
   { label: "À propos", href: "about" },
   { label: "Projets", href: "projects" },
+  { label: "Technologies", href: "technologies" },
   { label: "Contact", href: "contact" },
 ];
 

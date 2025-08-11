@@ -4,7 +4,7 @@ import { ArrowRight, Github, Linkedin } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="screen-wrapper grid lg:grid-cols-2 gap-12 mb-70 mt-80">
+    <div className="screen-wrapper grid lg:grid-cols-2 gap-12 mb-40 lg:mb-70 mt-32 lg:mt-80">
       <div>
         <Badge className="rounded-full py-1 px-6 text-sm">
           Je recherche un CDI !

@@ -1,35 +1,29 @@
+import Home from "@/app/page";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import {
-  BookCheck,
-  ChartPie,
-  FolderSync,
-  Goal,
-  Users,
-  Zap,
-} from "lucide-react";
+import { Bot, Dumbbell, FolderSync, Medal, Zap } from "lucide-react";
 
 const features = [
   {
-    icon: Goal,
-    title: "Identify Opportunities",
+    icon: Home,
+    title: "Ecotransac",
     description:
       "Easily uncover untapped areas to explore and expand your reach effortlessly.",
   },
   {
-    icon: BookCheck,
-    title: "Build Authority",
+    icon: Medal,
+    title: "Runswap",
     description:
       "Create valuable content that resonates, inspires trust, and positions you as an expert.",
   },
   {
-    icon: ChartPie,
-    title: "Instant Insights",
+    icon: Bot,
+    title: "Beink dream",
     description:
       "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
   },
   {
-    icon: Users,
-    title: "Engage with Your Audience",
+    icon: Dumbbell,
+    title: "Spart",
     description:
       "Boost audience engagement with interactive features like polls, quizzes, and forms.",
   },
@@ -54,15 +48,15 @@ const ProjectsSection = () => {
       className="screen-wrapper"
       aria-labelledby="projects-heading"
     >
-      <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">
-        Boost Your Strategy with Smart Features
+      <h2 className="text-5xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight sm:max-w-2xl sm:text-center sm:mx-auto">
+        Quelques une des mes réalisations et participations
       </h2>
 
-      <div className="mt-8 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
+      <div className="mt-12 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
         {features.map((feature) => (
           <Card
             key={feature.title}
-            className="flex flex-col border rounded-xl overflow-hidden shadow-none"
+            className="flex flex-col border rounded-xl overflow-hidden shadow-none pb-0"
           >
             <CardHeader>
               <feature.icon />
@@ -73,8 +67,9 @@ const ProjectsSection = () => {
                 {feature.description}
               </p>
             </CardHeader>
+
             <CardContent className="mt-auto px-0 pb-0">
-              <div className="bg-muted h-40 ml-6 rounded-tl-xl" />
+              <div className="bg-muted h-52 ml-6 rounded-tl-xl" />
             </CardContent>
           </Card>
         ))}
