@@ -11,7 +11,7 @@ const features = [
     icon: HandshakeIcon,
     title: "En bref",
     details:
-      "Je suis Rabire. Quand on me demande de me présenter, je réponds souvent que si je ne suis pas à la salle de sport, je suis certainement entrain de coder.",
+      "Je suis Rabire. Quand on me demande de me présenter, je réponds souvent que si je ne suis pas à la salle de sport, je suis certainement en train de coder.",
   },
   {
     icon: GraduationCapIcon,
@@ -42,11 +42,12 @@ const features = [
 const AboutSection = () => {
   return (
     <section id="about" className="screen-wrapper">
-      <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
-        Le code, c&apos;est bien.
+      <h2 className="title">
+        Le code c&apos;est bien,
         <br />
-        Mais qui tape dessus ?
+        mais qui l&apos;écrit ?
       </h2>
+
       <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
         {features.map((feature) => {
           const Icon = feature.icon;

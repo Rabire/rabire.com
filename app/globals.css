@@ -96,4 +96,8 @@
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
   }
+
+  .title {
+    @apply text-5xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-2xl md:text-center md:mx-auto;
+  }
 }

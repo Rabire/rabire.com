@@ -12,7 +12,7 @@ const features = [
   {
     title: "Node.js",
     description:
-      "Le plus impressionnant c'est que je comprends un peu près ce qu'il se passe dans le tsconfig.",
+      "Le plus impressionnant c'est que je comprends à peu près ce qu'il se passe dans le tsconfig.",
   },
   {
     title: "GraphQL & REST APIs",
@@ -33,11 +33,11 @@ const features = [
   {
     title: "Teamwork",
     description:
-      "En anglais ou en français, à l'écrit ou à l'oral. En plus je suis super sympa ! (enfin j'espère)",
+      "En anglais ou en français, à l'écrit ou à l'oral. En plus je suis super sympa ! (enfin je crois)",
   },
   {
     title: "Gestion du temps & priorisation",
-    description: "Pareto lui-même s'est inspiré de moi !",
+    description: "Pareto lui-même s'est inspiré de mes méthodes de travail !",
   },
   {
     title: "Réactivité, initiative et rigueur",
@@ -52,9 +52,7 @@ const StackSection = () => {
       className="screen-wrapper"
       aria-labelledby="skills-heading"
     >
-      <h2 className="text-5xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-2xl md:text-center md:mx-auto">
-        Des compétences techniques et humaines
-      </h2>
+      <h2 className="title">Des compétences techniques et humaines</h2>
 
       <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         {features.map((feature) => (

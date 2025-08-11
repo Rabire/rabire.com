@@ -6,6 +6,7 @@ import HeroSection from "@/components/hero-section";
 import Navbar from "@/components/navbar";
 import ProjectsSection from "@/components/projects-section";
 import StackSection from "@/components/stack-section";
+import Testimonial from "@/components/testimonial";
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
       <StackSection />
 
       <ContactSection />
+
+      <Testimonial />
 
       <Footer />
     </main>

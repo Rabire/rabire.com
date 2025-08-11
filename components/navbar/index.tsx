@@ -20,9 +20,12 @@ const Navbar = () => {
             variant="outline"
             className="hidden sm:inline-flex rounded-full"
           >
+            {/* TODO: add a pdf file */}
             .pdf
           </Button>
-          <Button className="rounded-full">Contactez-moi</Button>
+          <Button className="rounded-full" asChild>
+            <Link href="#contact">Contactez-moi</Link>
+          </Button>
 
           {/* Mobile Menu */}
           <div className="md:hidden">

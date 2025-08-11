@@ -20,37 +20,35 @@ const features: Feature[] = [
     icon: Home,
     title: "Ecotransac",
     description:
-      "Easily uncover untapped areas to explore and expand your reach effortlessly.",
+      "Un réseau d'agent commerciaux indépendants en immobilier que j'ai co-fondé.",
   },
   {
     icon: Medal,
     title: "Runswap",
     description:
-      "Create valuable content that resonates, inspires trust, and positions you as an expert.",
+      "Une plateforme de revente en ligne de dossards de course que j'ai co-fondé aussi.",
   },
   {
     icon: Bot,
     title: "Beink Dream",
     description:
-      "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
+      "Un outil qui permet de dessiner un croquis et de l'améliorer avec de l'IA.",
   },
   {
     icon: Dumbbell,
     title: "SPART",
-    description:
-      "Boost audience engagement with interactive features like polls, quizzes, and forms.",
+    description: "Une application mobile qui encourage le sport en entreprise.",
   },
   {
     icon: Brain,
     title: "Neurexpo",
     description:
-      "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
+      "Des mini-jeux autour des fonctions cognitives pour les étudiants.",
   },
   {
     icon: ChartColumnIcon,
     title: "Devboard",
-    description:
-      "Supercharge your growth by implementing strategies that drive results quickly and efficiently.",
+    description: "Un outil de productivité pour les développeurs.",
   },
 ];
 
@@ -61,7 +59,7 @@ const ProjectsSection = () => {
       className="screen-wrapper"
       aria-labelledby="projects-heading"
     >
-      <h2 className="text-5xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight sm:max-w-2xl sm:text-center sm:mx-auto">
+      <h2 className="title">
         Quelques une des mes réalisations et participations
       </h2>
 

@@ -16,7 +16,7 @@ const Footer = () => {
             {NAV_ITEMS.map(({ label, href }) => (
               <li key={label}>
                 <Link
-                  href={href}
+                  href={`#${href}`}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   {label}
@@ -41,7 +41,7 @@ const Footer = () => {
       <div className="p-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6">
         {/* Copyright */}
         <span className="text-muted-foreground">
-          &copy; {new Date().getFullYear()} Rabire HAKIM. All rights reserved.
+          &copy; {new Date().getFullYear()} Rabire HAKIM. Tous droits réservés.
         </span>
       </div>
     </footer>
