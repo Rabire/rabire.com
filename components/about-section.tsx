@@ -9,7 +9,7 @@ import {
 const features = [
   {
     icon: HandshakeIcon,
-    title: "Qui je suis en bref",
+    title: "En bref",
     details:
       "Je suis Rabire. Quand on me demande de me présenter, je réponds souvent que si je ne suis pas à la salle de sport, je suis certainement entrain de coder.",
   },
@@ -23,19 +23,19 @@ const features = [
     icon: FootprintsIcon,
     title: "Mon parcours",
     details:
-      "J'ai rapidement occupé des postes de lead tech, puis cofondé des projets. Cela m'a permis d'être à la fois quelqu'un qui livre efficacement et un vrai partenaire pour les équipes.",
+      "J'ai rapidement occupé des postes de lead tech en mission ou sur des projets internes en ESN. J'ai également co-fondé des projets avec la casquette de CTO. Cela m'a permis d'apporter une expertise technique solide tout en comprenant parfaitement les enjeux business.",
   },
   {
     icon: RocketIcon,
-    title: "Ce que j'apporte vraiment",
+    title: "Ce qui fait la différence",
     details:
       "Je n'ai jamais raté une deadline, et je n'ai pas l'intention de commencer maintenant. C'est mon petit défi personnel : livrer toujours à temps en se concentrant sur ce qui compte vraiment.",
   },
   {
     icon: SearchIcon,
-    title: "Ce que je recherche",
+    title: "Et aujourd'hui ?",
     details:
-      "Aujourd'hui, j'aimerais rejoindre une équipe où je pourrai mettre à profit mon expertise technique et mon sens du travail bien fait, sur des projets ambitieux.",
+      "J'aimerais rejoindre une équipe dans laquelle je peux mettre à profit mon expertise technique et mon sens du travail bien fait, sur des projets ambitieux.",
   },
 ];
 

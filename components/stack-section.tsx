@@ -1,78 +1,59 @@
-import {
-  BookCheck,
-  ChartPie,
-  FolderSync,
-  Goal,
-  Users,
-  Zap,
-} from "lucide-react";
-
 const features = [
   {
-    icon: Goal,
-    title: "Identify Opportunities",
+    title: "TypeScript & JavaScript",
     description:
-      "Easily uncover untapped areas to explore and expand your reach effortlessly and effectively.",
+      "D'ailleurs j'ai écris mon mémoire de fin d'études sur le choix du \"meilleur language\" (et j'ai eu 19)",
   },
   {
-    icon: BookCheck,
-    title: "Build Authority",
+    title: "React & Next.js",
     description:
-      "Create valuable content that resonates, inspires trust, and positions you as an expert.",
+      "J'ai choisis React à Vue.js ou Angular, et je n'ai jamais regretté.",
   },
   {
-    icon: ChartPie,
-    title: "Instant Insightsd",
+    title: "Node.js",
     description:
-      "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
+      "Le plus impressionnant c'est que je comprends un peu près ce qu'il se passe dans le tsconfig.",
   },
   {
-    icon: Users,
-    title: "Engage with Your Audience",
+    title: "GraphQL & REST APIs",
     description:
-      "Boost audience engagement with interactive features like polls, quizzes, and forms.",
+      "Je peux concevoir et consommer des APIs efficaces et robustes fingers in the nose.",
   },
   {
-    icon: FolderSync,
-    title: "Automate Your Workflow",
+    title: "Bases de données (PostgreSQL, MongoDB)",
     description:
-      "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
+      "À l'aise avec les BD relationnelles et non-relationnelles (ainsi que les BaaS)",
   },
   {
-    icon: Zap,
-    title: "Accelerate Growth",
+    title: "Cloud / DevOps (AWS, Docker, CI/CD)",
     description:
-      "Supercharge your growth by implementing strategies that drive results quickly and efficiently.",
+      "Deployer, gérer les environnements, optimiser, sécuriser ça me connais bien.",
+  },
+
+  {
+    title: "Teamwork",
+    description:
+      "En anglais ou en français, à l'écrit ou à l'oral. En plus je suis super sympa ! (enfin j'espère)",
   },
   {
-    icon: BookCheck,
-    title: "Build Authorityz",
-    description:
-      "Create valuable content that resonates, inspires trust, and positions you as an expert.",
+    title: "Gestion du temps & priorisation",
+    description: "Pareto lui-même s'est inspiré de moi !",
   },
   {
-    icon: ChartPie,
-    title: "Instant Insights",
-    description:
-      "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
-  },
-  {
-    icon: Goal,
-    title: "Identify Opportunidties",
-    description:
-      "Easily uncover untapped areas to explore and expand your reach effortlessly and effectively.",
+    title: "Réactivité, initiative et rigueur",
+    description: "Je m'efforce à être aussi fiable que le code que je produis.",
   },
 ];
 
 const StackSection = () => {
   return (
     <section
-      id="technologies"
+      id="skills"
       className="screen-wrapper"
-      aria-labelledby="technologies-heading"
+      aria-labelledby="skills-heading"
     >
       <h2 className="text-5xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-2xl md:text-center md:mx-auto">
-        Ma goto stack
+        Des compétences techniques et humaines
       </h2>
 
       <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-10">

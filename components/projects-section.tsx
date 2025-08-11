@@ -1,8 +1,21 @@
-import Home from "@/app/page";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Bot, Dumbbell, FolderSync, Medal, Zap } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import {
+  Bot,
+  Brain,
+  ChartColumnIcon,
+  Dumbbell,
+  Home,
+  Medal,
+} from "lucide-react";
 
-const features = [
+type Feature = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+};
+
+const features: Feature[] = [
   {
     icon: Home,
     title: "Ecotransac",
@@ -17,25 +30,25 @@ const features = [
   },
   {
     icon: Bot,
-    title: "Beink dream",
+    title: "Beink Dream",
     description:
       "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
   },
   {
     icon: Dumbbell,
-    title: "Spart",
+    title: "SPART",
     description:
       "Boost audience engagement with interactive features like polls, quizzes, and forms.",
   },
   {
-    icon: FolderSync,
-    title: "Automate Your Workflow",
+    icon: Brain,
+    title: "Neurexpo",
     description:
       "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
   },
   {
-    icon: Zap,
-    title: "Accelerate Growth",
+    icon: ChartColumnIcon,
+    title: "Devboard",
     description:
       "Supercharge your growth by implementing strategies that drive results quickly and efficiently.",
   },
@@ -53,27 +66,37 @@ const ProjectsSection = () => {
       </h2>
 
       <div className="mt-12 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
-        {features.map((feature) => (
-          <Card
-            key={feature.title}
-            className="flex flex-col border rounded-xl overflow-hidden shadow-none pb-0"
-          >
-            <CardHeader>
-              <feature.icon />
-              <h4 className="!mt-3 text-xl font-semibold tracking-tight">
-                {feature.title}
-              </h4>
-              <p className="mt-1 text-muted-foreground text-[17px]">
-                {feature.description}
-              </p>
-            </CardHeader>
+        {features.map((feature) => {
+          const Icon = feature.icon;
 
-            <CardContent className="mt-auto px-0 pb-0">
-              <div className="bg-muted h-52 ml-6 rounded-tl-xl" />
-            </CardContent>
-          </Card>
-        ))}
+          return (
+            <Card
+              key={feature.title}
+              className="flex flex-col border rounded-xl overflow-hidden shadow-none pb-0 hover:border-primary/50 transition-border duration-300"
+            >
+              <CardHeader>
+                <Icon className="h-6 w-6 text-primary" />
+                <h4 className="!mt-3 text-xl font-semibold tracking-tight">
+                  {feature.title}
+                </h4>
+                <p className="mt-1 text-muted-foreground text-[17px]">
+                  {feature.description}
+                </p>
+              </CardHeader>
+
+              <CardContent className="mt-auto px-0 pb-0">
+                <div className="bg-muted h-52 ml-6 rounded-tl-xl" />
+              </CardContent>
+            </Card>
+          );
+        })}
       </div>
+
+      <p className="mt-12 text-center text-muted-foreground max-w-2xl mx-auto">
+        Vous trouverez ici une sélection de mes projets accessibles
+        publiquement. D’autres, tout aussi intéressants, restent confidentiels
+        ou réservés à des environnements privés.
+      </p>
     </section>
   );
 };

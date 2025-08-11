@@ -9,7 +9,7 @@ import Link from "next/link";
 export const NAV_ITEMS = [
   { label: "À propos", href: "about" },
   { label: "Projets", href: "projects" },
-  { label: "Technologies", href: "technologies" },
+  { label: "Compétences", href: "skills" },
   { label: "Contact", href: "contact" },
 ];
 

@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Phone } from "lucide-react";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -40,6 +41,17 @@ const HeroSection = () => {
             className="rounded-full text-base shadow-none"
           >
             <Github className="!h-5 !w-5" />
+          </Button>
+
+          <Button
+            variant="outline"
+            size="lg"
+            className="rounded-full text-base shadow-none"
+            asChild
+          >
+            <Link href="tel:+33652789907">
+              <Phone className="!h-5 !w-5" />
+            </Link>
           </Button>
         </div>
       </div>
