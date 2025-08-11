@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Logo from "./logo";
 import { NAV_ITEMS } from "./navbar/nav-menu";
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
     <footer className="screen-wrapper">
       <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10 px-6">
         <div>
-          <div className="font-bold text-2xl">TODO: LOGO</div>
+          <Logo size="lg" />
 
           <ul className="mt-6 flex items-center gap-4 flex-wrap">
             {NAV_ITEMS.map(({ label, href }) => (

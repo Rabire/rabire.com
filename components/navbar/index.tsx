@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Logo } from "./logo";
+import Logo from "../logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
 
@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-6 inset-x-4 h-16 bg-background/70 backdrop-blur-sm border z-20 dark:border-slate-700/70 max-w-screen-xl mx-auto rounded-full">
       <div className="h-full flex items-center justify-between mx-auto px-4">
-        <Link href="/">
-          <Logo />
+        <Link href="/" className="ml-4">
+          <Logo size="md" />
         </Link>
 
         {/* Desktop Menu */}
