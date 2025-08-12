@@ -52,9 +52,9 @@ const StackSection = () => {
       className="screen-wrapper"
       aria-labelledby="skills-heading"
     >
-      <h2 className="title">Des compétences techniques et humaines</h2>
+      <h2 className="title mb-12">Des compétences techniques et humaines</h2>
 
-      <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         {features.map((feature) => (
           <div
             key={feature.title}

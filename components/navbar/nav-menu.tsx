@@ -20,7 +20,7 @@ export const NavMenu = (props: NavigationMenuProps) => (
         <Link
           key={item.href}
           href={`#${item.href}`}
-          className="text-sm p-3 font-medium relative transition-colors duration-200 text-foreground/70 hover:text-foreground/100 hover:[&>span]:opacity-100"
+          className="hover:font-semibold text-sm p-3 font-medium relative transition-colors duration-200 text-foreground/70 hover:text-foreground/100 hover:[&>span]:opacity-100"
         >
           {item.label}
 

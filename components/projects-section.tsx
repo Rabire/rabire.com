@@ -59,11 +59,11 @@ const ProjectsSection = () => {
       className="screen-wrapper"
       aria-labelledby="projects-heading"
     >
-      <h2 className="title">
+      <h2 className="title mb-12">
         Quelques une des mes réalisations et participations
       </h2>
 
-      <div className="mt-12 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
+      <div className="w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
         {features.map((feature) => {
           const Icon = feature.icon;
 

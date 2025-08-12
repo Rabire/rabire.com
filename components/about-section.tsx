@@ -42,13 +42,13 @@ const features = [
 const AboutSection = () => {
   return (
     <section id="about" className="screen-wrapper">
-      <h2 className="title">
+      <h2 className="title mb-12">
         Le code c&apos;est bien,
         <br />
         mais qui l&apos;écrit ?
       </h2>
 
-      <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
+      <div className="w-full mx-auto space-y-20">
         {features.map((feature) => {
           const Icon = feature.icon;
           return (

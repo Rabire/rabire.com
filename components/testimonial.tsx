@@ -31,26 +31,30 @@ const testimonials = [
 ];
 
 const Testimonial = () => (
-  <section className="screen-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {testimonials.map((testimonial) => (
-      <Card key={testimonial.id}>
-        <CardHeader className="flex items-center gap-4">
-          <Avatar>
-            <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
-              {testimonial.name.charAt(0)}
-            </AvatarFallback>
-          </Avatar>
-          <div>
-            <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-            <CardDescription>{testimonial.company}</CardDescription>
-          </div>
-        </CardHeader>
+  <section className="screen-wrapper">
+    <h2 className="title mb-12">Témoignages 100% vérifiés par personne</h2>
 
-        <CardContent>
-          <p className="text-[17px]">{testimonial.testimonial}</p>
-        </CardContent>
-      </Card>
-    ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial) => (
+        <Card key={testimonial.id}>
+          <CardHeader className="flex items-center gap-4">
+            <Avatar>
+              <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
+                {testimonial.name.charAt(0)}
+              </AvatarFallback>
+            </Avatar>
+            <div>
+              <CardTitle className="text-lg">{testimonial.name}</CardTitle>
+              <CardDescription>{testimonial.company}</CardDescription>
+            </div>
+          </CardHeader>
+
+          <CardContent>
+            <p className="text-[17px]">{testimonial.testimonial}</p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
   </section>
 );
 
