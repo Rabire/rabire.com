@@ -61,7 +61,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative group flex items-end mt-32 sm:mt-8 lg:mt-0">
-        <div className="w-full aspect-video bg-accent/80 rounded-xl max-h-[300px] lg:max-h-none" />
+        <div className="w-full aspect-video bg-accent/50 rounded-xl max-h-[300px] lg:max-h-none" />
 
         <Image
           src="/images/rabire-noflex.webp"
