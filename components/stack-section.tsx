@@ -45,6 +45,7 @@ const features = [
   },
 ];
 
+// TODO: icons
 const StackSection = () => {
   return (
     <section

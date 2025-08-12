@@ -52,6 +52,8 @@ const features: Feature[] = [
   },
 ];
 
+// TODO: modal content du projet
+
 const ProjectsSection = () => {
   return (
     <section

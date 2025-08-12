@@ -33,6 +33,7 @@ const Footer = () => {
 
         {/* Subscribe Newsletter */}
         <div className="max-w-xs w-full">
+          {/* TODO: plugform */}
           <h6 className="font-semibold">Laissez moi vous rappeler</h6>
           <form className="mt-4 flex items-center gap-2">
             <Input type="tel" placeholder="Votre numéro de téléphone" />

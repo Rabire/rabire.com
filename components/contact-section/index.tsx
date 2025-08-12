@@ -42,6 +42,8 @@ const ContactSection = () => {
     form.reset();
   };
 
+  // TODO: plug form
+
   return (
     <section id="contact" className="screen-wrapper">
       <div className="text-center mb-12">
@@ -54,61 +56,6 @@ const ContactSection = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <ContactDetails />
-
-        {/* Contact Info Cards */}
-        {/* <div className="grid grid-rows-3 lg:col-span-1 space-y-6">
-          <Link href="mailto:contact@rabire.com">
-            <Card className="hover-card-border">
-              <CardContent>
-                <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <Mail className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-lg">Email</CardTitle>
-                    <CardDescription className="mt-1">
-                      contact@rabire.com
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-
-          <Link href="tel:+33652789907">
-            <Card className="hover-card-border">
-              <CardContent>
-                <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <Phone className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-lg">Téléphone</CardTitle>
-                    <CardDescription className="mt-1">
-                      +33 6 52 78 99 07
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-
-          <Card>
-            <CardContent>
-              <div className="flex items-center space-x-4">
-                <div className="flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <CardTitle className="text-lg">Localisation</CardTitle>
-                  <CardDescription className="mt-1">
-                    Marseille, France (dès janvier 2026)
-                  </CardDescription>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div> */}
 
         {/* Contact Form */}
         <Card className="h-full lg:col-span-2 border-primary/50">
