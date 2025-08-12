@@ -35,7 +35,7 @@ const features = [
     icon: SearchIcon,
     title: "Et aujourd'hui ?",
     details:
-      "J'aimerais rejoindre une équipe dans laquelle je peux mettre à profit mon expertise technique et mon sens du travail bien fait, sur des projets ambitieux.",
+      "Marseille me voilà ! J'aimerais rejoindre une équipe dans laquelle je peux mettre à profit mon expertise technique et mon sens du travail bien fait, sur des projets ambitieux.",
   },
 ];
 
