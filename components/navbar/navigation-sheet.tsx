@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { DialogTitle } from "@radix-ui/react-dialog";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import Logo from "../logo";
@@ -15,6 +16,8 @@ export const NavigationSheet = () => {
       </SheetTrigger>
 
       <SheetContent side="left" className="max-md:w-full max-md:max-w-none p-0">
+        <DialogTitle className="sr-only">Menu de navigation</DialogTitle>
+
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between px-4 py-4 border-b">
             <Logo />
