@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant contact (html:has(.contact-peer:hover) &);
 
 @theme inline {
   --color-background: var(--background);

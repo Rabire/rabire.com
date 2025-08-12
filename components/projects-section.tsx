@@ -40,7 +40,7 @@ const features: Feature[] = [
     icon: Bot,
     title: "Beink Dream",
     description:
-      "Un outil qui permet de dessiner un croquis et de l'améliorer avec de l'IA. D'ailleurs on a présenter mon POC dans l'émission Qui veut être mon associé sur M6 !",
+      "Un outil qui permet de dessiner un croquis et de l'améliorer avec de l'IA. Mon POC à levé 500k dans l'émission Qui veut être mon associé sur M6 !",
     url: "https://www.beink.fr",
     image: "/images/beink.webp",
   },

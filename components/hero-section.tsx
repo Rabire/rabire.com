@@ -40,7 +40,11 @@ const HeroSection = () => {
         </p>
 
         <div className="mt-12 flex items-center gap-4">
-          <Button size="lg" className="rounded-full text-base px-8" asChild>
+          <Button
+            size="lg"
+            className="rounded-full text-base px-8 contact-peer"
+            asChild
+          >
             <Link href="#contact">Me contacter</Link>
           </Button>
 
@@ -49,7 +53,7 @@ const HeroSection = () => {
               key={key}
               variant="outline"
               size="lg"
-              className="rounded-full text-base shadow-none"
+              className="rounded-full text-base shadow-none contact-peer"
               asChild
             >
               <Link href={href} target="_blank">
@@ -61,14 +65,14 @@ const HeroSection = () => {
       </div>
 
       <div className="relative group flex items-end mt-32 sm:mt-8 lg:mt-0">
-        <div className="w-full aspect-video bg-accent/50 rounded-xl max-h-[300px] lg:max-h-none" />
+        <div className="w-full aspect-video bg-accent/50 rounded-2xl max-h-[300px] lg:max-h-none" />
 
         <Image
           src="/images/rabire-noflex.webp"
           alt="Rabire HAKIM"
           width={300}
           height={300}
-          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 group-hover:opacity-0 transition-opacity"
+          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 contact:opacity-0 group-hover:opacity-0 transition-opacity"
         />
 
         <Image
@@ -76,7 +80,7 @@ const HeroSection = () => {
           alt="Rabire HAKIM"
           width={300}
           height={300}
-          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 contact:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity"
         />
       </div>
     </div>
