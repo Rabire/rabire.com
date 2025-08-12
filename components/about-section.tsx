@@ -19,7 +19,7 @@ const features = [
     icon: GraduationCapIcon,
     title: "Ma formation",
     details:
-      "Diplômé d'un Bac +3 Responsable de Projet Informatique puis d'un Mastère Expert en Systèmes d'Information à Isitech, je combine expertise technique et compréhension stratégique des projets informatiques.",
+      "Diplômé d'un Mastère Expert en Systèmes d'Information et d'un Bachelor Responsable de Projet Informatique, ces 5 années d'alternance à école Isitech ont permis l'acquisition d'une solide expertise technique et d'une vision stratégique des projets informatiques.",
     image: "/images/isitech.webp",
   },
   {

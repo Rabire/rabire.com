@@ -19,7 +19,7 @@ const DETAILS = [
   {
     icon: MapPin,
     title: "Localisation",
-    description: "Marseille, France (dès janvier 2026)",
+    description: "Marseille (dès janvier 2026)",
   },
 ];
 
