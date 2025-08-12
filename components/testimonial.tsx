@@ -31,7 +31,7 @@ const testimonials = [
 ];
 
 const Testimonial = () => (
-  <section className="screen-wrapper">
+  <section id="testimonials" className="screen-wrapper">
     <h2 className="title mb-12">Témoignages 100% vérifiés par personne</h2>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

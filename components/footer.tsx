@@ -5,6 +5,11 @@ import Link from "next/link";
 import Logo from "./logo";
 import { NAV_ITEMS } from "./navbar/nav-menu";
 
+const items = [
+  ...NAV_ITEMS.slice(0, -1),
+  { label: "Contact", href: "contact" },
+];
+
 const Footer = () => {
   return (
     <footer className="screen-wrapper">
@@ -13,7 +18,7 @@ const Footer = () => {
           <Logo size="lg" />
 
           <ul className="mt-6 flex items-center gap-4 flex-wrap">
-            {NAV_ITEMS.map(({ label, href }) => (
+            {items.map(({ label, href }) => (
               <li key={label}>
                 <Link
                   href={`#${href}`}

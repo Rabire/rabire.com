@@ -79,6 +79,20 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+@layer utilities {
+  .hover-card-border {
+    @apply hover:border-primary/50 transition-all duration-250;
+  }
+
+  .title {
+    @apply text-5xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-2xl md:text-center md:mx-auto;
+  }
+
+  .screen-wrapper {
+    @apply max-w-screen-xl mx-auto px-6;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -88,16 +102,8 @@
     @apply bg-background text-foreground min-h-screen;
   }
 
-  .screen-wrapper {
-    @apply max-w-screen-xl mx-auto px-6;
-  }
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
-  }
-
-  .title {
-    @apply text-5xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-2xl md:text-center md:mx-auto;
   }
 }

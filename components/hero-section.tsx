@@ -5,6 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 const HeroSection = () => {
+  const outlineActions = [
+    {
+      key: "linkedin",
+      Icon: Linkedin,
+      href: "https://www.linkedin.com/in/rabire-hakim",
+    },
+    {
+      key: "github",
+      Icon: Github,
+      href: "https://github.com/rabire",
+    },
+    { key: "phone", Icon: Phone, href: "tel:+33652789907" },
+  ];
+
   return (
     <div className="screen-wrapper grid lg:grid-cols-2 gap-12 mb-40 lg:mb-70 mt-32 lg:mt-80">
       <div>
@@ -30,32 +44,19 @@ const HeroSection = () => {
             Me contacter <ArrowRight className="!h-5 !w-5" />
           </Button>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="rounded-full text-base shadow-none"
-          >
-            <Linkedin className="!h-5 !w-5" />
-          </Button>
-
-          <Button
-            variant="outline"
-            size="lg"
-            className="rounded-full text-base shadow-none"
-          >
-            <Github className="!h-5 !w-5" />
-          </Button>
-
-          <Button
-            variant="outline"
-            size="lg"
-            className="rounded-full text-base shadow-none"
-            asChild
-          >
-            <Link href="tel:+33652789907">
-              <Phone className="!h-5 !w-5" />
-            </Link>
-          </Button>
+          {outlineActions.map(({ key, Icon, href }) => (
+            <Button
+              key={key}
+              variant="outline"
+              size="lg"
+              className="rounded-full text-base shadow-none"
+              asChild
+            >
+              <Link href={href} target="_blank">
+                <Icon className="!h-5 !w-5" />
+              </Link>
+            </Button>
+          ))}
         </div>
       </div>
 

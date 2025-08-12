@@ -70,7 +70,7 @@ const ProjectsSection = () => {
           return (
             <Card
               key={feature.title}
-              className="flex flex-col border rounded-xl overflow-hidden shadow-none pb-0 hover:border-primary/50 transition-border duration-300"
+              className="flex flex-col border rounded-xl overflow-hidden shadow-none pb-0 hover-card-border"
             >
               <CardHeader>
                 <Icon className="h-6 w-6 text-primary" />

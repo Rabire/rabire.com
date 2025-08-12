@@ -10,7 +10,7 @@ export const NAV_ITEMS = [
   { label: "À propos", href: "about" },
   { label: "Projets", href: "projects" },
   { label: "Compétences", href: "skills" },
-  { label: "Contact", href: "contact" },
+  { label: "Témoignages", href: "testimonials" },
 ];
 
 export const NavMenu = (props: NavigationMenuProps) => (

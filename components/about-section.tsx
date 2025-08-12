@@ -19,7 +19,7 @@ const features = [
     icon: GraduationCapIcon,
     title: "Ma formation",
     details:
-      "Diplômé d'un Mastère Expert en Systèmes d'Information à Isitech, je combine expertise technique et compréhension stratégique des projets informatiques.",
+      "Diplômé d'un Bac +3 Responsable de Projet Informatique puis d'un Mastère Expert en Systèmes d'Information à Isitech, je combine expertise technique et compréhension stratégique des projets informatiques.",
     image: "/images/isitech.webp",
   },
   {
@@ -33,14 +33,15 @@ const features = [
     icon: RocketIcon,
     title: "Ce qui fait la différence",
     details:
-      "Je n'ai jamais raté une deadline, et je n'ai pas l'intention de commencer maintenant. C'est mon petit défi personnel : livrer toujours à temps en se concentrant sur ce qui compte vraiment.",
+      "Tenir mes délais, c’est mon petit plaisir coupable. Ça me rassure et ça rend tout le monde content.",
+    // "Je n'ai jamais raté une deadline, et je n'ai pas l'intention de commencer maintenant. C'est mon petit défi personnel : livrer toujours à temps en se concentrant sur ce qui compte vraiment.",
     image: "/images/remote-work.webp",
   },
   {
     icon: SearchIcon,
     title: "Et aujourd'hui ?",
     details:
-      "Marseille me voilà ! J'aimerais rejoindre une équipe dans laquelle je peux mettre à profit mon expertise technique et mon sens du travail bien fait, sur des projets ambitieux.",
+      "Marseille j'arrive ! J'aimerais rejoindre une équipe dans laquelle je peux mettre à profit mon expertise technique et mon sens du travail bien fait, sur des projets ambitieux.",
     image: "/images/marseille.webp",
   },
 ];
