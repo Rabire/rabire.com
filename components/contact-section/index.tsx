@@ -18,7 +18,9 @@ import ContactDetails from "./details";
 
 const formSchema = z.object({
   name: z.string().min(2, "Le nom doit comporter au moins 2 caractères"),
-  email: z.string().email("Veuillez saisir une adresse email valide"),
+  details: z
+    .string()
+    .min(10, "Veuillez saisir un email ou un numéro de téléphone"),
   subject: z.string().min(5, "L'objet doit comporter au moins 5 caractères"),
   message: z
     .string()
@@ -29,7 +31,7 @@ const ContactSection = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       name: "",
-      email: "",
+      details: "",
       subject: "",
       message: "",
     },
@@ -47,7 +49,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="screen-wrapper">
       <div className="text-center mb-12">
-        <h2 className="title">On en discute ?</h2>
+        <h2 className="title mb-4">On en discute ?</h2>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Je suis ouvert à échanger sur les opportunités qui pourraient écrire
           le prochain chapitre de ma carrière.
@@ -71,7 +73,7 @@ const ContactSection = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Nom</FormLabel>
+                        <FormLabel>Votre nom</FormLabel>
                         <FormControl>
                           <Input placeholder="Votre nom" {...field} />
                         </FormControl>
@@ -82,14 +84,13 @@ const ContactSection = () => {
 
                   <FormField
                     control={form.control}
-                    name="email"
+                    name="details"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>Numéro de téléphone ou email</FormLabel>
                         <FormControl>
                           <Input
-                            type="email"
-                            placeholder="votre.email@exemple.com"
+                            placeholder="votre.email@exemple.com ou 06 52 78 99 07"
                             {...field}
                           />
                         </FormControl>
@@ -118,7 +119,7 @@ const ContactSection = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Votre message</FormLabel>
                       <FormControl>
                         <textarea
                           className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"

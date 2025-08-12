@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Phone } from "lucide-react";
+import { Github, Linkedin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,7 +23,7 @@ const HeroSection = () => {
     <div className="screen-wrapper grid lg:grid-cols-2 gap-12 mb-40 lg:mb-70 mt-32 lg:mt-80">
       <div>
         <Badge className="rounded-full py-1 px-6 text-sm">
-          Je recherche un CDI !
+          Je recherche un CDI
           <span className="aspect-square bg-background animate-ping ml-4 rounded-full w-1.5 h-1.5"></span>
         </Badge>
 
@@ -40,8 +40,8 @@ const HeroSection = () => {
         </p>
 
         <div className="mt-12 flex items-center gap-4">
-          <Button size="lg" className="rounded-full text-base">
-            Me contacter <ArrowRight className="!h-5 !w-5" />
+          <Button size="lg" className="rounded-full text-base px-8" asChild>
+            <Link href="#contact">Me contacter</Link>
           </Button>
 
           {outlineActions.map(({ key, Icon, href }) => (
