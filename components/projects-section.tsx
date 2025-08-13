@@ -113,6 +113,7 @@ const ProjectsSection = () => {
                       src={feature.image}
                       alt={feature.title}
                       fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       className="object-cover rounded-tl-xl group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

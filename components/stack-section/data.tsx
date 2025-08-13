@@ -18,22 +18,19 @@ export const SKILLS: Skill[] = [
     title: "React & Next.js",
     description:
       "J'ai choisis React à Vue.js ou Angular, et je n'ai jamais regretté.",
-    images: [
-      "/images/react.webp", // FIXME: missong
-      "/images/nextjs.webp",
-    ],
+    images: ["/images/reactjs.webp", "/images/nextjs.webp"],
   },
   {
     title: "Node.js",
     description:
       "Le plus impressionnant c'est que je comprends à peu près ce qu'il se passe dans le tsconfig.",
-    images: ["/images/nodejs.webp"], // FIXME: rm bg
+    images: ["/images/nodejs.webp"],
   },
   {
     title: "GraphQL & REST APIs",
     description:
       "Je peux concevoir et consommer des APIs efficaces et robustes fingers in the nose.",
-    images: ["/images/graphql.webp"], // FIXME: rm bg
+    images: ["/images/graphql.webp"],
   },
   {
     title: "Bases de données (PostgreSQL, MongoDB)",
@@ -41,9 +38,9 @@ export const SKILLS: Skill[] = [
       "À l'aise avec les BD relationnelles et non-relationnelles (ainsi que les BaaS)",
     images: [
       "/images/psql.webp",
-      "/images/mongodb.webp", // FIXME: rm bg
-      "/images/supabase.webp", // FIXME: rm bg
-      "/images/firebase.webp", // FIXME: rm bg
+      "/images/mongodb.webp",
+      "/images/supabase.webp",
+      "/images/firebase.webp",
     ],
   },
   {
@@ -51,7 +48,7 @@ export const SKILLS: Skill[] = [
     description:
       "Deployer, gérer les environnements, optimiser, sécuriser ça me connais bien.",
     images: [
-      "/images/docker.webp", // FIXME: missing
+      "/images/docker-icon.webp",
       "/images/aws.webp",
       "/images/github.webp",
     ],
