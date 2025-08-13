@@ -45,7 +45,9 @@ const StackSection = () => {
       aria-labelledby="skills-heading"
     >
       <Animated>
-        <h2 className="title mb-12">Des compétences techniques et humaines</h2>
+        <h2 id="skills-heading" className="title mb-12">
+          Des compétences techniques et humaines
+        </h2>
       </Animated>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

@@ -11,7 +11,7 @@ const items = [
 
 const Footer = () => {
   return (
-    <footer className="screen-wrapper">
+    <footer className="screen-wrapper" aria-labelledby="footer-heading">
       <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10 px-6">
         <div>
           <Logo size="lg" />
@@ -22,6 +22,7 @@ const Footer = () => {
                 <Link
                   href={`#${href}`}
                   className="text-muted-foreground hover:text-foreground"
+                  aria-label={`Aller à la section ${label}`}
                 >
                   {label}
                 </Link>
@@ -39,7 +40,10 @@ const Footer = () => {
 
       <Separator />
 
-      <div className="p-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6">
+      <div
+        className="p-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6"
+        aria-label="Informations légales"
+      >
         {/* Copyright */}
         <span className="text-muted-foreground">
           &copy; {new Date().getFullYear()} Rabire HAKIM. Tous droits réservés.

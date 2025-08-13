@@ -80,7 +80,7 @@ const ProjectsSection = () => {
     >
       <div className="text-center mb-12">
         <Animated>
-          <h2 className="title mb-4">
+          <h2 id="projects-heading" className="title mb-4">
             Quelques-unes de mes réalisations et participations
           </h2>
         </Animated>
@@ -95,7 +95,13 @@ const ProjectsSection = () => {
           const Icon = feature.icon;
 
           return (
-            <Link key={feature.title} href={feature.url} target="_blank">
+            <Link
+              key={feature.title}
+              href={feature.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${feature.title} – ouvrir le site dans un nouvel onglet`}
+            >
               <Card className="group h-full flex flex-col border rounded-xl overflow-hidden shadow-none pb-0 hover-card-border">
                 <CardHeader>
                   <Icon className="h-6 w-6 text-primary" />
@@ -113,7 +119,7 @@ const ProjectsSection = () => {
                       src={feature.image}
                       alt={feature.title}
                       fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      sizes="(min-width: 1280px) 400px, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       className="object-cover rounded-tl-xl group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

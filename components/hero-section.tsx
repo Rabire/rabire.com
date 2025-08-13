@@ -21,7 +21,11 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="screen-wrapper grid lg:grid-cols-2 gap-12 mb-40 lg:mb-70 mt-32 lg:mt-80">
+    <section
+      id="hero"
+      aria-labelledby="hero-heading"
+      className="screen-wrapper grid lg:grid-cols-2 gap-12 mb-40 lg:mb-70 mt-32 lg:mt-80"
+    >
       <div>
         <Badge className="rounded-full py-1 px-6 text-sm">
           Je recherche un CDI
@@ -29,7 +33,10 @@ const HeroSection = () => {
         </Badge>
 
         <Animated dir="right">
-          <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold !leading-[1.2]">
+          <h1
+            id="hero-heading"
+            className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold !leading-[1.2]"
+          >
             Rabire HAKIM
             <br />
             Développeur fullstack
@@ -60,7 +67,12 @@ const HeroSection = () => {
                 className="rounded-full text-base shadow-none contact-peer"
                 asChild
               >
-                <Link href={href} target="_blank">
+                <Link
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={key}
+                >
                   <Icon className="!h-5 !w-5" />
                 </Link>
               </Button>
@@ -78,6 +90,8 @@ const HeroSection = () => {
             alt="Rabire HAKIM"
             width={300}
             height={300}
+            sizes="300px"
+            priority
             className="contact:hidden group-hover:hidden transition-opacity hero-noflex-animate-mobile"
           />
 
@@ -86,11 +100,13 @@ const HeroSection = () => {
             alt="Rabire HAKIM"
             width={300}
             height={300}
+            sizes="300px"
+            loading="lazy"
             className="contact:block hidden group-hover:block transition-opacity hero-flex-animate-mobile"
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

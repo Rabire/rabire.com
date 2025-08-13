@@ -49,9 +49,13 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="screen-wrapper">
+    <section
+      id="about"
+      className="screen-wrapper"
+      aria-labelledby="about-heading"
+    >
       <Animated>
-        <h2 className="title mb-12">
+        <h2 id="about-heading" className="title mb-12">
           Le code c&apos;est bien,
           <br />
           mais qui l&apos;écrit ?
@@ -71,7 +75,7 @@ const AboutSection = () => {
                   src={feature.image}
                   alt={feature.title}
                   fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 600px, (min-width: 768px) 50vw, 100vw"
                   className="object-cover rounded-xl"
                 />
               </div>

@@ -50,13 +50,23 @@ const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="screen-wrapper">
+    <section
+      id="contact"
+      className="screen-wrapper"
+      aria-labelledby="contact-heading"
+      aria-describedby="contact-desc"
+    >
       <div className="text-center mb-12">
         <Animated>
-          <h2 className="title mb-4">On en discute ?</h2>
+          <h2 id="contact-heading" className="title mb-4">
+            On en discute ?
+          </h2>
         </Animated>
 
-        <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+        <p
+          id="contact-desc"
+          className="text-lg text-muted-foreground max-w-xl mx-auto"
+        >
           Je suis ouvert à échanger sur les opportunités qui pourraient écrire
           le prochain chapitre de ma carrière.
         </p>
@@ -79,6 +89,7 @@ const ContactSection = () => {
                     e.preventDefault();
                   }
                 }}
+                noValidate
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <FormField
@@ -90,6 +101,8 @@ const ContactSection = () => {
                         <FormControl>
                           <Input
                             placeholder="Ou le nom de votre entreprise"
+                            autoComplete="name"
+                            aria-invalid={!!form.formState.errors.name}
                             {...field}
                           />
                         </FormControl>
@@ -107,6 +120,9 @@ const ContactSection = () => {
                         <FormControl>
                           <Input
                             placeholder="Selon vos préférences"
+                            autoComplete="tel"
+                            inputMode="text"
+                            aria-invalid={!!form.formState.errors.details}
                             {...field}
                           />
                         </FormControl>
@@ -123,7 +139,12 @@ const ContactSection = () => {
                     <FormItem>
                       <FormLabel>Objet</FormLabel>
                       <FormControl>
-                        <Input placeholder="De quoi s'agit-il ?" {...field} />
+                        <Input
+                          placeholder="De quoi s'agit-il ?"
+                          autoComplete="off"
+                          aria-invalid={!!form.formState.errors.subject}
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -140,6 +161,7 @@ const ContactSection = () => {
                         <textarea
                           className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
                           placeholder="Dites-moi tout..."
+                          aria-invalid={!!form.formState.errors.message}
                           {...field}
                         />
                       </FormControl>
@@ -149,12 +171,20 @@ const ContactSection = () => {
                 />
 
                 {state.status === "error" && (
-                  <p className="text-red-500 text-sm">
+                  <p
+                    className="text-red-500 text-sm"
+                    role="status"
+                    aria-live="polite"
+                  >
                     {(state as any).message || "Une erreur est survenue."}
                   </p>
                 )}
                 {state.status === "success" && (
-                  <p className="text-green-600 text-sm">
+                  <p
+                    className="text-green-600 text-sm"
+                    role="status"
+                    aria-live="polite"
+                  >
                     Message envoyé avec succès.
                   </p>
                 )}

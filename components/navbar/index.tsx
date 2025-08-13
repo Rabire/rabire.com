@@ -6,9 +6,13 @@ import { NavigationSheet } from "./navigation-sheet";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-6 inset-x-4 h-16 bg-background/70 backdrop-blur-sm border z-20 dark:border-slate-700/70 max-w-screen-xl mx-auto rounded-full">
+    <nav
+      className="fixed top-6 inset-x-4 h-16 bg-background/70 backdrop-blur-sm border z-20 dark:border-slate-700/70 max-w-screen-xl mx-auto rounded-full"
+      role="navigation"
+      aria-label="Navigation principale"
+    >
       <div className="h-full flex items-center justify-between mx-auto px-4">
-        <Link href="/" className="ml-4">
+        <Link href="/" className="ml-4" aria-label="Accueil">
           <Logo size="md" />
         </Link>
 
@@ -24,7 +28,7 @@ const Navbar = () => {
             .pdf
           </Button>
           <Button className="rounded-full" asChild>
-            <Link href="#contact">Contactez-moi</Link>
+            <Link href="#contact" aria-label="Aller à la section contact">Contactez-moi</Link>
           </Button>
 
           {/* Mobile Menu */}

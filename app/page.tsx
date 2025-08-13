@@ -10,7 +10,7 @@ import Testimonial from "@/components/testimonial";
 
 export default function Home() {
   return (
-    <main className="space-y-20 md:space-y-40">
+    <main className="space-y-20 md:space-y-40" id="main" role="main">
       <Navbar />
 
       <HeroSection />
