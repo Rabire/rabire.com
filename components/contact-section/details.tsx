@@ -13,7 +13,7 @@ const DETAILS = [
   {
     icon: Phone,
     title: "Téléphone",
-    description: "+33 6 52 78 99 07",
+    description: "06 52 78 99 07",
     href: "tel:+33652789907",
   },
   {

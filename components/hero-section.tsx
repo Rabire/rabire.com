@@ -39,7 +39,7 @@ const HeroSection = () => {
           l&apos;air impressionnant.
         </p>
 
-        <div className="mt-12 flex items-center gap-4">
+        <div className="mt-6 sm:mt-12 flex flex-col sm:flex-row gap-4">
           <Button
             size="lg"
             className="rounded-full text-base px-8 contact-peer"
@@ -48,19 +48,21 @@ const HeroSection = () => {
             <Link href="#contact">Me contacter</Link>
           </Button>
 
-          {outlineActions.map(({ key, Icon, href }) => (
-            <Button
-              key={key}
-              variant="outline"
-              size="lg"
-              className="rounded-full text-base shadow-none contact-peer"
-              asChild
-            >
-              <Link href={href} target="_blank">
-                <Icon className="!h-5 !w-5" />
-              </Link>
-            </Button>
-          ))}
+          <div className="flex items-center justify-center gap-4">
+            {outlineActions.map(({ key, Icon, href }) => (
+              <Button
+                key={key}
+                variant="outline"
+                size="lg"
+                className="rounded-full text-base shadow-none contact-peer"
+                asChild
+              >
+                <Link href={href} target="_blank">
+                  <Icon className="!h-5 !w-5" />
+                </Link>
+              </Button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -72,7 +74,7 @@ const HeroSection = () => {
           alt="Rabire HAKIM"
           width={300}
           height={300}
-          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 contact:opacity-0 group-hover:opacity-0 transition-opacity"
+          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 contact:opacity-0 group-hover:opacity-0 transition-opacity hero-noflex-animate-mobile"
         />
 
         <Image
@@ -80,7 +82,7 @@ const HeroSection = () => {
           alt="Rabire HAKIM"
           width={300}
           height={300}
-          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 contact:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity"
+          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 contact:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity hero-flex-animate-mobile"
         />
       </div>
     </div>

@@ -14,6 +14,7 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
+// TODO: SEO en beton
 export const metadata: Metadata = {
   title: "Rabire HAKIM",
   description: "Web developer",
