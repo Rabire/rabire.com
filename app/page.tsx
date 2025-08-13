@@ -8,8 +8,6 @@ import ProjectsSection from "@/components/projects-section";
 import StackSection from "@/components/stack-section";
 import Testimonial from "@/components/testimonial";
 
-// TODO: add scroll effects
-
 export default function Home() {
   return (
     <main className="space-y-20 md:space-y-40">
