@@ -109,45 +109,29 @@
   }
 }
 
-/* Mobile-only animation to show the flex image 1s every 5s when hover isn't available */
-@media (max-width: 767px) and (hover: none) and (pointer: coarse) {
+@media (max-width: 1024px) {
   @keyframes heroFlexBlink {
-    0% {
+    0%,
+    75% {
       opacity: 0;
     }
-    15% {
-      opacity: 0;
-    }
-    35% {
+    80%,
+    95% {
       opacity: 1;
-    }
-    55% {
-      opacity: 0;
     }
     100% {
       opacity: 0;
     }
   }
 
-  .hero-flex-animate-mobile {
-    animation: heroFlexBlink 5s infinite;
-    animation-timing-function: steps(1, end);
-    transition: none;
-    will-change: opacity;
-  }
-
   @keyframes heroNoFlexBlink {
-    0% {
+    0%,
+    75% {
       opacity: 1;
     }
-    15% {
-      opacity: 1;
-    }
-    35% {
+    80%,
+    95% {
       opacity: 0;
-    }
-    55% {
-      opacity: 1;
     }
     100% {
       opacity: 1;
@@ -156,8 +140,19 @@
 
   .hero-noflex-animate-mobile {
     animation: heroNoFlexBlink 5s infinite;
-    animation-timing-function: steps(1, end);
+  }
+
+  .hero-flex-animate-mobile {
+    animation: heroFlexBlink 5s infinite;
+  }
+
+  /* Force both images to be displayed and stacked on mobile so opacity animations can run */
+  .hero-flex-animate-mobile,
+  .hero-noflex-animate-mobile {
+    display: block !important;
+    grid-area: 1 / 1;
     transition: none;
+    transition-delay: 0s;
     will-change: opacity;
   }
 }

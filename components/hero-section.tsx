@@ -39,7 +39,7 @@ const HeroSection = () => {
           l&apos;air impressionnant.
         </p>
 
-        <div className="mt-6 sm:mt-12 flex flex-col sm:flex-row gap-4">
+        <div className="mt-12 flex flex-col sm:flex-row gap-4">
           <Button
             size="lg"
             className="rounded-full text-base px-8 contact-peer"
@@ -66,24 +66,26 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="relative group flex items-end mt-32 sm:mt-8 lg:mt-0">
-        <div className="w-full aspect-video bg-accent/50 rounded-2xl max-h-[300px] lg:max-h-none" />
+      <div className="relative group flex justify-center">
+        <div className="-z-10 absolute bottom-0 w-full aspect-video bg-accent/50 rounded-2xl max-h-[300px] min-h-2/3 lg:max-h-none" />
 
-        <Image
-          src="/images/rabire-noflex.webp"
-          alt="Rabire HAKIM"
-          width={300}
-          height={300}
-          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 contact:opacity-0 group-hover:opacity-0 transition-opacity hero-noflex-animate-mobile"
-        />
+        <div className="grid justify-center">
+          <Image
+            src="/images/rabire-noflex.webp"
+            alt="Rabire HAKIM"
+            width={300}
+            height={300}
+            className="contact:hidden group-hover:hidden transition-opacity hero-noflex-animate-mobile"
+          />
 
-        <Image
-          src="/images/rabire-flex.webp"
-          alt="Rabire HAKIM"
-          width={300}
-          height={300}
-          className="absolute bottom-[1px] left-1/2 -translate-x-1/2 contact:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity hero-flex-animate-mobile"
-        />
+          <Image
+            src="/images/rabire-flex.webp"
+            alt="Rabire HAKIM"
+            width={300}
+            height={300}
+            className="contact:block hidden group-hover:block transition-opacity hero-flex-animate-mobile"
+          />
+        </div>
       </div>
     </div>
   );
