@@ -1,3 +1,4 @@
+import AOSProvider from "@/components/aos-provider";
 import TailwindIndicator from "@/components/tailwind-indicator";
 import type { Metadata } from "next";
 import { Modak, Outfit } from "next/font/google";
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
         {children}
         <TailwindIndicator />
+        <AOSProvider />
       </body>
     </html>
   );

@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import Animated from "../animated";
 import ContactDetails from "./details";
 
 const formSchema = z.object({
@@ -49,7 +50,10 @@ const ContactSection = () => {
   return (
     <section id="contact" className="screen-wrapper">
       <div className="text-center mb-12">
-        <h2 className="title mb-4">On en discute ?</h2>
+        <Animated>
+          <h2 className="title mb-4">On en discute ?</h2>
+        </Animated>
+
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Je suis ouvert à échanger sur les opportunités qui pourraient écrire
           le prochain chapitre de ma carrière.
@@ -75,7 +79,10 @@ const ContactSection = () => {
                       <FormItem>
                         <FormLabel>Votre nom</FormLabel>
                         <FormControl>
-                          <Input placeholder="Votre nom" {...field} />
+                          <Input
+                            placeholder="Ou le nom de votre entreprise"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -87,10 +94,10 @@ const ContactSection = () => {
                     name="details"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Numéro de téléphone ou email</FormLabel>
+                        <FormLabel>Votre téléphone ou email</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="votre.email@exemple.com ou 06 52 78 99 07"
+                            placeholder="Selon vos préférences"
                             {...field}
                           />
                         </FormControl>
@@ -123,7 +130,7 @@ const ContactSection = () => {
                       <FormControl>
                         <textarea
                           className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
-                          placeholder="Dites-moi tout"
+                          placeholder="Dites-moi tout..."
                           {...field}
                         />
                       </FormControl>

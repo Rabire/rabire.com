@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Animated from "./animated";
 
 type Feature = {
   icon: LucideIcon;
@@ -78,9 +79,11 @@ const ProjectsSection = () => {
       aria-labelledby="projects-heading"
     >
       <div className="text-center mb-12">
-        <h2 className="title mb-4">
-          Quelques-unes de mes réalisations et participations
-        </h2>
+        <Animated>
+          <h2 className="title mb-4">
+            Quelques-unes de mes réalisations et participations
+          </h2>
+        </Animated>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Un screenshot, c’est bien… mais chaque projet a beaucoup plus à
           raconter.

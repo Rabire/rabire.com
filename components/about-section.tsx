@@ -1,3 +1,4 @@
+import Animated from "@/components/animated";
 import {
   FootprintsIcon,
   GraduationCapIcon,
@@ -12,7 +13,7 @@ const features = [
     icon: HandshakeIcon,
     title: "En bref",
     details:
-      "Je suis Rabire. Quand on me demande de me présenter, je réponds souvent que si je ne suis pas à la salle de sport, je suis certainement en train de coder.",
+      "Je suis Rabire. Quand on me demande de me présenter, je réponds souvent que si je ne suis pas à la salle de sport, je suis certainement en train de programmer.",
     image: "/images/rabire.webp",
   },
   {
@@ -49,11 +50,13 @@ const features = [
 const AboutSection = () => {
   return (
     <section id="about" className="screen-wrapper">
-      <h2 className="title mb-12">
-        Le code c&apos;est bien,
-        <br />
-        mais qui l&apos;écrit ?
-      </h2>
+      <Animated>
+        <h2 className="title mb-12">
+          Le code c&apos;est bien,
+          <br />
+          mais qui l&apos;écrit ?
+        </h2>
+      </Animated>
 
       <div className="w-full mx-auto space-y-20">
         {features.map((feature) => {

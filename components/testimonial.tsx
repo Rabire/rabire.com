@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Animated from "./animated";
 
 const testimonials = [
   {
@@ -32,7 +33,9 @@ const testimonials = [
 
 const Testimonial = () => (
   <section id="testimonials" className="screen-wrapper">
-    <h2 className="title mb-12">Témoignages 100% vérifiés par personne</h2>
+    <Animated>
+      <h2 className="title mb-12">Témoignages 100% vérifiés par personne</h2>
+    </Animated>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {testimonials.map((testimonial) => (

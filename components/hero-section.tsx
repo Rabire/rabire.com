@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Animated from "./animated";
 
 const HeroSection = () => {
   const outlineActions = [
@@ -27,11 +28,13 @@ const HeroSection = () => {
           <span className="aspect-square bg-background animate-ping ml-4 rounded-full w-1.5 h-1.5"></span>
         </Badge>
 
-        <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold !leading-[1.2]">
-          Rabire HAKIM
-          <br />
-          Développeur fullstack
-        </h1>
+        <Animated dir="right">
+          <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold !leading-[1.2]">
+            Rabire HAKIM
+            <br />
+            Développeur fullstack
+          </h1>
+        </Animated>
 
         <p className="mt-6 max-w-[60ch] text-lg">
           Mes grands-parents disent que je travaille &quot;dans les
