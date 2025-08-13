@@ -71,6 +71,7 @@ const AboutSection = () => {
                   src={feature.image}
                   alt={feature.title}
                   fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover rounded-xl"
                 />
               </div>

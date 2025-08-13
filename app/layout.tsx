@@ -1,14 +1,8 @@
 import AOSProvider from "@/components/aos-provider";
 import TailwindIndicator from "@/components/tailwind-indicator";
 import type { Metadata } from "next";
-import { Modak, Outfit } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
-
-const modak = Modak({
-  variable: "--font-modak",
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -32,9 +26,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Rabire HAKIM" />
       </head>
 
-      <body
-        className={`${modak.variable} ${outfit.variable} antialiased font-sans`}
-      >
+      <body className={`${outfit.variable} antialiased font-sans`}>
         {children}
         <TailwindIndicator />
         <AOSProvider />

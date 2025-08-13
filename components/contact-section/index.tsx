@@ -1,5 +1,7 @@
 "use client";
 
+import { contactSchema } from "@/app/actions/schema";
+import { sendContact } from "@/app/actions/send-contact";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -12,40 +14,40 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useActionState, useEffect } from "react";
+import { useFormStatus } from "react-dom";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import Animated from "../animated";
 import ContactDetails from "./details";
 
-const formSchema = z.object({
-  name: z.string().min(2, "Le nom doit comporter au moins 2 caractères"),
-  details: z
-    .string()
-    .min(10, "Veuillez saisir un email ou un numéro de téléphone"),
-  subject: z.string().min(5, "L'objet doit comporter au moins 5 caractères"),
-  message: z
-    .string()
-    .min(10, "Le message doit comporter au moins 10 caractères"),
-});
-
 const ContactSection = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<z.infer<typeof contactSchema>>({
     defaultValues: {
       name: "",
       details: "",
       subject: "",
       message: "",
     },
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log("Formulaire de contact soumis :", data);
-    // Here you would typically send the data to your backend
-    form.reset();
-  };
+  const [state, formAction] = useActionState(sendContact, { status: "idle" });
 
-  // TODO: plug form
+  useEffect(() => {
+    if (state.status === "success") {
+      form.reset();
+    }
+  }, [state.status, form]);
+
+  function SubmitButton() {
+    const { pending } = useFormStatus();
+    return (
+      <Button type="submit" className="w-full sm:w-auto" disabled={pending}>
+        {pending ? "Envoi…" : "Envoyer le message"}
+      </Button>
+    );
+  }
 
   return (
     <section id="contact" className="screen-wrapper">
@@ -69,7 +71,14 @@ const ContactSection = () => {
             <Form {...form}>
               <form
                 className="space-y-6"
-                onSubmit={form.handleSubmit(onSubmit)}
+                action={formAction}
+                onSubmit={async (e) => {
+                  // Valide côté client; si invalide, bloque l'envoi server action
+                  const isValid = await form.trigger();
+                  if (!isValid) {
+                    e.preventDefault();
+                  }
+                }}
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <FormField
@@ -139,10 +148,19 @@ const ContactSection = () => {
                   )}
                 />
 
+                {state.status === "error" && (
+                  <p className="text-red-500 text-sm">
+                    {(state as any).message || "Une erreur est survenue."}
+                  </p>
+                )}
+                {state.status === "success" && (
+                  <p className="text-green-600 text-sm">
+                    Message envoyé avec succès.
+                  </p>
+                )}
+
                 <div className="flex justify-center">
-                  <Button type="submit" className="w-full sm:w-auto">
-                    Envoyer le message
-                  </Button>
+                  <SubmitButton />
                 </div>
               </form>
             </Form>

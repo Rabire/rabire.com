@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import FooterCallbackForm from "./footer-callback-form";
 import Logo from "./logo";
 import { NAV_ITEMS } from "./navbar/nav-menu";
 
@@ -31,14 +30,10 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Subscribe Newsletter */}
+        {/* Callback request */}
         <div className="max-w-xs w-full">
-          {/* TODO: plugform */}
           <h6 className="font-semibold">Laissez moi vous rappeler</h6>
-          <form className="mt-4 flex items-center gap-2">
-            <Input type="tel" placeholder="Votre numéro de téléphone" />
-            <Button>Envoyer</Button>
-          </form>
+          <FooterCallbackForm />
         </div>
       </div>
 
