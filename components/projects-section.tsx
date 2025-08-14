@@ -25,7 +25,7 @@ const features: Feature[] = [
     icon: Home,
     title: "Ecotransac",
     description:
-      "Un réseau d'agent commerciaux indépendants en immobilier que j'ai co-fondé. L'application Nestor est utilisé par une dizaine de technophiles tout les jours.",
+      "Un réseau d'agent commerciaux indépendants en immobilier que j'ai co-fondé. L'application Nestor est utilisé par une dizaine de technophobes tout les jours.",
     url: "https://recrutement.ecotransac.fr/outils",
     image: "/images/ecotransac.webp",
   },
@@ -33,7 +33,7 @@ const features: Feature[] = [
     icon: Medal,
     title: "Runswap",
     description:
-      "Une plateforme de revente en ligne de dossards de course que j'ai co-fondé aussi. Des milliers de visiteurs uniques chaque mois.",
+      "Une plateforme de revente en ligne de dossards de course que j'ai également co-fondé. Des milliers de visiteurs uniques chaque mois.",
     url: "https://runswap.co",
     image: "/images/runswap.webp",
   },
@@ -49,7 +49,7 @@ const features: Feature[] = [
     icon: Dumbbell,
     title: "SPART",
     description:
-      "Une application mobile qui encourage le sport en entreprise. Une super DA et une appli qui tien debout comme la tour Eiffel !",
+      "Une application mobile qui encourage le sport en entreprise. Une super DA et une appli aussi solide qu'un bunker !",
     url: "https://www.spart.life",
     image: "/images/spart.webp",
   },
@@ -65,7 +65,7 @@ const features: Feature[] = [
     icon: ChartColumnIcon,
     title: "Devboard",
     description:
-      "Un outil de productivité pour les développeurs. Il s'agit d'un concours de dev sur Youtube (que j'ai gagné évidemment).",
+      "Un outil de productivité pour les développeurs conçu en une semaine. Il s'agit d'un concours de dev sur Youtube (que j'ai gagné évidemment).",
     url: "https://devboard-murex.vercel.app",
     image: "/images/devboard.webp",
   },

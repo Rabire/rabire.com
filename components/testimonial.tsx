@@ -21,7 +21,7 @@ const testimonials = [
     name: "Elon Musk",
     company: "Tesla, OpenAI, SpaceX, X, blablabla",
     testimonial:
-      "Il m’a parler de voitures électriques. J’ai trouvé ça bizarre, mais j’ai fini par le faire.",
+      "Il m’a parlé de voitures électriques. J’ai trouvé ça bizarre, mais j’ai fini par le faire.",
   },
   {
     id: 2,
@@ -32,9 +32,15 @@ const testimonials = [
 ];
 
 const Testimonial = () => (
-  <section id="testimonials" className="screen-wrapper" aria-labelledby="testimonials-heading">
+  <section
+    id="testimonials"
+    className="screen-wrapper"
+    aria-labelledby="testimonials-heading"
+  >
     <Animated>
-      <h2 id="testimonials-heading" className="title mb-12">Témoignages 100% vérifiés par personne</h2>
+      <h2 id="testimonials-heading" className="title mb-12">
+        Témoignages 100% vérifiés par personne
+      </h2>
     </Animated>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
