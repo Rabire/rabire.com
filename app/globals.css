@@ -138,11 +138,11 @@
   }
 
   .hero-noflex-animate-mobile {
-    animation: heroNoFlexBlink 5s infinite;
+    animation: heroNoFlexBlink 4s infinite;
   }
 
   .hero-flex-animate-mobile {
-    animation: heroFlexBlink 5s infinite;
+    animation: heroFlexBlink 4s infinite;
   }
 
   /* Force both images to be displayed and stacked on mobile so opacity animations can run */

@@ -80,10 +80,6 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
     other: [{ rel: "mask-icon", url: "/icon0.svg" }],
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b0b0b" },
-  ],
   referrer: "strict-origin-when-cross-origin",
   appleWebApp: {
     capable: true,
