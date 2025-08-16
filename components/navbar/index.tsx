@@ -23,12 +23,20 @@ const Navbar = () => {
           <Button
             variant="outline"
             className="hidden sm:inline-flex rounded-full"
+            asChild
           >
-            {/* TODO: add a pdf file */}
-            .pdf
+            <Link
+              href="/Rabire HAKIM - Développeur Web Senior.pdf"
+              target="_blank"
+              aria-label="Ouvrir mon CV .pdf dans un nouvel onglet"
+            >
+              .pdf
+            </Link>
           </Button>
           <Button className="rounded-full" asChild>
-            <Link href="#contact" aria-label="Aller à la section contact">Contactez-moi</Link>
+            <Link href="#contact" aria-label="Aller à la section contact">
+              Contactez-moi
+            </Link>
           </Button>
 
           {/* Mobile Menu */}
