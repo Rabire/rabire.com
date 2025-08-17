@@ -39,8 +39,14 @@ export const NavigationSheet = () => {
 
           <div className="mt-auto p-4 border-t space-y-3">
             <SheetClose asChild>
-              <Button variant="outline" className="w-full rounded-full">
-                Télécharger CV
+              <Button variant="outline" className="w-full rounded-full" asChild>
+                <Link
+                  href="/Rabire HAKIM - Développeur Web Senior.pdf"
+                  target="_blank"
+                  aria-label="Ouvrir mon CV .pdf dans un nouvel onglet"
+                >
+                  CV
+                </Link>
               </Button>
             </SheetClose>
             <SheetClose asChild>
