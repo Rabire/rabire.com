@@ -21,6 +21,11 @@ import { z } from "zod";
 import Animated from "../animated";
 import ContactDetails from "./details";
 
+type ActionState =
+  | { status: "idle" }
+  | { status: "success" }
+  | { status: "error"; message: string };
+
 const ContactSection = () => {
   const form = useForm<z.infer<typeof contactSchema>>({
     defaultValues: {
@@ -32,7 +37,10 @@ const ContactSection = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const [state, formAction] = useActionState(sendContact, { status: "idle" });
+  const [state, formAction] = useActionState<ActionState, FormData>(
+    sendContact,
+    { status: "idle" }
+  );
 
   useEffect(() => {
     if (state.status === "success") {
@@ -176,7 +184,9 @@ const ContactSection = () => {
                     role="status"
                     aria-live="polite"
                   >
-                    {(state as any).message || "Une erreur est survenue."}
+                    {state.status === "error"
+                      ? state.message
+                      : "Une erreur est survenue."}
                   </p>
                 )}
                 {state.status === "success" && (
