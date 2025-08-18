@@ -26,7 +26,7 @@ const Navbar = () => {
             asChild
           >
             <Link
-              href="/Rabire HAKIM - CV.pdf"
+              href="/coucou"
               target="_blank"
               aria-label="Ouvrir mon CV .pdf dans un nouvel onglet"
             >
