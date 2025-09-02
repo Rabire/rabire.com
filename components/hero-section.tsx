@@ -101,7 +101,6 @@ const HeroSection = () => {
             width={300}
             height={300}
             sizes="300px"
-            loading="lazy"
             className="contact:block hidden group-hover:block transition-opacity hero-flex-animate-mobile"
           />
         </div>

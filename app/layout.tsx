@@ -124,6 +124,12 @@ export default function RootLayout({
             }),
           }}
         />
+
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="1865b10f-3feb-4bc3-82c3-fa73b74cfea3"
+        ></script>
       </head>
 
       <body className={`${outfit.variable} antialiased font-sans`}>
